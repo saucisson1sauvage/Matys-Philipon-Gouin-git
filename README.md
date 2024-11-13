@@ -166,3 +166,81 @@ deb http://deb.debian.org/debian/ bullseye-updates main
 deb-src http://deb.debian.org/debian/ bullseye-updates main
 ```
 
+### 🌞 Récupérer le fichier meow
+```powershell 
+e@Debian11:~/Downloads$ git clone https://gitlab.com/it4lik/b1-os/
+Cloning into 'b1-os'...
+warning: redirecting to https://gitlab.com/it4lik/b1-os.git/
+remote: Enumerating objects: 201, done.
+remote: Counting objects: 100% (98/98), done.
+remote: Compressing objects: 100% (93/93), done.
+remote: Total 201 (delta 31), reused 0 (delta 0), pack-reused 103 (from 1)
+Receiving objects: 100% (201/201), 21.58 MiB | 61.00 KiB/s, done.
+Resolving deltas: 100% (61/61), done.
+```
+
+### 🌞 Trouver le dossier dawa/
+
+```powershell
+
+me@Debian11:~/Downloads/b1-os/tp/2$ file meow
+meow: Zip archive data, at least v2.0 to extract
+me@Debian11:~/Downloads/b1-os/tp/2$ mv meow meow.zip
+me@Debian11:~/Downloads/b1-os/tp/2$ unzip meow.zip
+Archive:  meow.zip
+  inflating: meow
+me@Debian11:~/Downloads/b1-os/tp/2$ file meow
+meow: XZ compressed data
+me@Debian11:~/Downloads/b1-os/tp/2$ mv meow meow.xz
+me@Debian11:~/Downloads/b1-os/tp/2$ unxz meow.xz
+me@Debian11:~/Downloads/b1-os/tp/2$ ls
+file_users.md  img  matryoshka.md  meow  meow.zip  processes_packages.md  README.md
+me@Debian11:~/Downloads/b1-os/tp/2$ cd meow
+-bash: cd: meow: Not a directory
+me@Debian11:~/Downloads/b1-os/tp/2$ file meow
+meow: bzip2 compressed data, block size = 900k  
+me@Debian11:~/Downloads/b1-os/tp/2$ mv meow.bzip2 meow.bz2
+me@Debian11:~/Downloads/b1-os/tp/2$ bunzip2 meow.bz2
+me@Debian11:~/Downloads/b1-os/tp/2$ ls
+file_users.md  img  matryoshka.md  meow  meow.zip  processes_packages.md  README.md
+me@Debian11:~/Downloads/b1-os/tp/2$ cd meow
+-bash: cd: meow: Not a directory
+me@Debian11:~/Downloads/b1-os/tp/2$ file meow
+meow: RAR archive data, v5
+
+...
+
+me@Debian11:~/Downloads/b1-os/tp/2$ ls
+dawa  file_users.md  img  matryoshka.md  meow.rar  meow.tar  meow.zip  processes_packages.md  README.md
+
+```
+
+### 🌞 Dans le dossier dawa/, déterminer le chemin vers
+
+
+```powershell
+me@Debian11:~/Downloads/b1-os/tp/2/dawa$ find . -name cookie
+./folder14/25/cookie
+me@Debian11:~/Downloads/b1-os/tp/2/dawa$ find . ! -name file*
+.
+./folder50
+./folder50/27
+./folder50/2
+
+...
+
+./folder37/45/23
+./folder37/45/23/43
+./folder37/45/23/43/54
+me@Debian11:~/Downloads/b1-os/tp/2/dawa$ ls ./folder37/45/23/43/54
+file43
+me@Debian11:~/Downloads/b1-os/tp/2/dawa$ find . -type f -size 15M
+./folder31/19/file39
+me@Debian11:~/Downloads/b1-os/tp/2/dawa$ find . -type f -name ".*"
+./folder32/14/.hidden_file
+me@Debian11:~/Downloads/b1-os/tp/2/dawa$ grep -r '^7*$'
+grep: folder31/19/file39: binary file matches
+folder43/38/file41:77777777777
+me@Debian11:~/Downloads/b1-os/tp/2/dawa$ find . -type f -newermt 2014-01-01 ! -newermt 2015-01-01
+./folder36/40/file43
+```
