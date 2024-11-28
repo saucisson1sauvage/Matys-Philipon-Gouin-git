@@ -358,3 +358,36 @@ rizin-plugin-ghidra-dbgsym/parrot6 0.6.0-1parrot2 amd64
 ```
 vive parrot lol 
 
+### 🌞 Récupérez le code de password_2.c sur la machine Linux et compilez-le
+impossible a compiler xd
+
+###
+
+```powershell
+
+┌─[matyspg@parrot]─[~/work]
+└──╼ $wget https://gitlab.com/it4lik/b1-os/-/blob/main/tp/5/kaddate_challenge
+--2024-11-28 02:16:06--  https://gitlab.com/it4lik/b1-os/-/blob/main/tp/5/kaddate_challenge
+Resolving gitlab.com (gitlab.com)... 172.65.251.78, 2606:4700:90:0:f22e:fbec:5bed:a9b9
+Connecting to gitlab.com (gitlab.com)|172.65.251.78|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 36369 (36K) [text/html]
+Saving to: ‘kaddate_challenge’
+
+kaddate_challenge   100%[===================>]  35,52K  --.-KB/s    in 0,002s  
+
+2024-11-28 02:16:07 (20,3 MB/s) - ‘kaddate_challenge’ saved [36369/36369]
+┌─[✗]─[matyspg@parrot]─[~/work]
+└──╼ $./kaddate_challenge
+bash: ./kaddate_challenge: Permission denied
+┌─[✗]─[matyspg@parrot]─[~/work]
+└──╼ $sudo ./kaddate_challenge
+[sudo] password for matyspg: 
+sudo: ./kaddate_challenge: command not found
+
+
+┌─[✗]─[matyspg@parrot]─[~/work]
+└──╼ $echo "c3VwZXJzZWNyZXRmbGFnCg==" | base64 -d
+supersecretflag
+```
+xd
