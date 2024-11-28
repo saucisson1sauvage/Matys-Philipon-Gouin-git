@@ -331,4 +331,30 @@ u4]=JcdrGk_P6ՅPuu48瞀x"R\z{DQdI#g~HH]1c鐂XdM       ~3 Y2p'8=pZ
 k1d5LJ
 ֟okiB;)!Ӌk'|UE<,Ӡ:7pyM댢M4q>vOy;+3S]l*Cʑ0_dISoy}hgVlw!H˘FYD/>?Y1Y4FV2ѷjّ[@$><9*qx]     HzJ|7?s"h7Ӝ%CρnVBH(5Yϋ~خ
 ```
-# 😳
+### 🌞 Avec une commande apt search, déterminez si le paquet ghidra est disponible
+### 🌞 Ajouter l'URL des dépôts Kali à vos dépôts existants
+### 🌞 Ajoutez la clé publique des gars de chez Kali
+### 🌞 Mettez à jour la liste des dépôts que votre OS connaît actuellement
+### 🌞 Avec une commande apt search, déterminez si le paquet ghidra est disponible
+### 🌞  Installez le paquet ghidra
+
+
+``` powershell
+┌─[matyspg@parrot]─[~]
+└──╼ $apt search ghidra
+Sorting... Done
+Full Text Search... Done
+ghidra/parrot6,now 10.3.2-0parrot1 amd64 [installed,automatic]
+  Software Reverse Engineering Framework
+
+ghidra-data/parrot6,now 10.4-0parrot1 all [installed,automatic]
+  FID databases for Ghidra
+
+rizin-plugin-ghidra/parrot6 0.6.0-1parrot2 amd64
+  A fork of Ghidra's decompiler for Rizin and Cutter
+
+rizin-plugin-ghidra-dbgsym/parrot6 0.6.0-1parrot2 amd64
+  debug symbols for rizin-plugin-ghidra
+```
+vive parrot lol 
+
